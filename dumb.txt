@@ -1,0 +1,18 @@
+Set rs = db.OpenRecordset("Select Transaction.BillDate,Transaction.BillNo,DoctorMaster.DoctorName,Transaction.Patient,Transaction.Age,Transaction.Sex,Transaction.email,Transaction.Mobile,Department.DepartmentName,T1.TestName As Test,T2.TestName As SubTest,T2.DefaultValue,Units.UnitName,Transaction.TestValue From Transaction,DoctorMaster,Department,Units,TestRegister As T1,TestRegister As T2 Where (Transaction.BillDate Between cDate('" & DTPFrom.Value & "') And cDate('" & DTPTo.Value & "')) And (DoctorMaster.DoctorCode=Transaction.DoctorCode) And (Department.DepartmentCode=T1.DepartmentCode) And (T1.Code=Transaction.TestCode) And (T2.Code=Transaction.SubTestCode) 
+
+And (Transaction.DoctorCode='" & sDoctorCode(CoDoctor.ListIndex + 1) & "')
+
+And (Transaction.TestCode='" & sTestCode(CoTest.ListIndex + 1) & "')
+
+And (Transaction.SubTestCode='" & sSubTestCode(CoSubTest.ListIndex + 1) & "')
+
+And (T1.DepartmentCode='" & sDepartmentCode(CoDepartment.ListIndex + 1) & "') 
+
+And ((Transaction.Patient='*" & trim(TPatient.Text) & "*') 
+Or (Transaction.Age=*" & value(TPatient.Text) & "*) 
+Or (Transaction.Sex='*" & trim(TPatient.Text) & "*') 
+Or (Transaction.email='*" & trim(TPatient.Text) & "*')
+Or (Transaction.Mobile='*" & trim(TPatient.Text) & "*'))
+
+
+Order By BillDate,Val(BillNo)")

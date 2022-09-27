@@ -1,0 +1,13 @@
+FMain = 0, 0, 0, 0, C, 52, 52, 939, 494, C
+FTestRegister = 78, 78, 965, 520, C, 104, 104, 991, 546, C
+DextopModule = 0, 0, 0, 0, C
+FAboutUs = 0, 0, 0, 0, C, 26, 26, 913, 468, C
+FMedicalTest = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FMedicalReport = 0, 0, 0, 0, C, 26, 26, 884, 468, C
+FUnits = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FDoctorRegister = 0, 0, 0, 0, C, 52, 52, 910, 494, C
+FDepartment = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FBillReport = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FUserAccounts = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FLogin = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+mjwPDF = 0, 0, 0, 0, C
